@@ -1,38 +1,25 @@
 # Super Trunfo
 
-Projeto introdutorio em C para cadastro de uma carta de Super Trunfo pelo terminal.
+Projeto em C para cadastrar duas cartas de cidades, calcular atributos derivados e comparar os resultados no terminal.
 
-## O que o programa faz
+## Objetivo
 
-- Solicita qual carta sera cadastrada.
-- Le os campos estado, codigo, nome da cidade, populacao, area, PIB e pontos turisticos.
-- Calcula a densidade populacional e o PIB per capita a partir dos dados informados.
-- Exibe na tela os dados da carta cadastrada ao final da entrada.
+Praticar entrada e saida de dados, uso de variaveis e operacoes numericas em C.
 
-## Arquivos do repositorio
+## Ferramentas
 
-- `main.c`: codigo-fonte principal do programa.
-- `.gitignore`: regras para ignorar binarios e arquivos locais da IDE.
+- C
+- GCC
 
-## Como compilar
+## Execucao
 
-Exemplo com GCC:
+Compile:
 
 ```bash
 gcc main.c -o main
 ```
 
-No Windows, o executavel gerado normalmente sera `main.exe`.
-
-## Como executar
-
-No Linux ou macOS:
-
-```bash
-./main
-```
-
-No PowerShell:
+Execute:
 
 ```powershell
 .\main.exe
@@ -40,6 +27,5 @@ No PowerShell:
 
 ## Observacoes
 
-- O projeto esta focado em praticar entrada e saida de dados em C.
-- O valor do PIB deve ser informado em bilhoes de reais.
-- O repositorio ignora arquivos compilados e configuracoes locais da IDE para manter o versionamento limpo.
+- O PIB deve ser informado em bilhoes de reais.
+- O programa compara populacao, area, PIB, pontos turisticos, densidade populacional, PIB per capita e super poder.
