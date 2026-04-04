@@ -4,69 +4,43 @@ int main(int argc, char const *argv[]) {
   // Variavel usada para identificar qual carta esta sendo cadastrada.
   int carta = 1;
   char estado;
-  char codigo[3];
+  char codigo[4];
   char nomeCidade[50];
   int populacao;
   double area;
   double pib;
   int numeroPontosTuristicos;
+  double densidadePopulacional;
+  double pibPerCapita;
 
-  // Cadastro da primeira carta.
-  printf("\nCadastrando a Carta %d\n", carta);
-  printf("Qual o estado da carta %d?\n", carta);
-  scanf("%c\n", &estado);
+  // Cadastro da carta.
+  printf("\nQuala carta será cadastrada: ");
+  scanf("%d",&carta);
 
-  printf("Qual o codigo da carta %d?\n", carta);
-  scanf("%3s", &codigo);
+  printf("\nEstado: ");
+  scanf(" %c",&estado);
 
-  printf("Qual o nome da cidade da carta %d?\n", carta);
-  scanf("%49[^\n]", &nomeCidade);
+  printf("\nCodigo: ");
+  scanf("%3s",codigo);
 
-  printf("Qual a população da cidade?\n");
-  scanf("%d", &populacao);
+  printf("\nNome da cidade: ");
+  scanf(" %49[^\n]",nomeCidade);
 
-  printf("Qual a área da cidade?\n");
-  scanf("%f", &area);
+  printf("\nPopulação: ");
+  scanf("%d",&populacao);
 
-  printf("Qual é o PIB da cidade?\n");
-  scanf("%f", &pib);
+  printf("\nÁrea: ");
+  scanf("%lf",&area);
 
-  printf("Qual o número de pontos turisticos da cidade?\n");
-  scanf("%d", &numeroPontosTuristicos);
+  printf("\nPIB: ");
+  scanf("%lf",&pib);
 
-  printf("\nCarta %d cadastrada com sucesso:\n", carta);
-  printf("Estado: %c\n", estado);
-  printf("Codigo: %s\n", codigo);
-  printf("Cidade: %s\n", nomeCidade);
-  printf("Populacao: %d\n", populacao);
-  printf("Area: %.2lfkm2\n", area);
-  printf("PIB: %.2lf\n", pib);
-  printf("Pontos turisticos: %d\n\n", numeroPontosTuristicos);
+  printf("\nNúmero de pontos turisticos: ");
+  scanf("%d",&numeroPontosTuristicos);
 
-  // Reaproveita as mesmas variaveis para ler os dados da segunda carta.
-  carta = 2;
-
-  printf("\nCadastrando a Carta %d\n", carta);
-  printf("Qual o estado da carta %d?\n", carta);
-  scanf("%c\n", &estado);
-
-  printf("Qual o codigo da carta %d?\n", carta);
-  scanf("%3s", &codigo);
-
-  printf("Qual o nome da cidade da carta %d?\n", carta);
-  scanf("%49[^\n]", &nomeCidade);
-
-  printf("Qual a população da cidade?\n");
-  scanf("%d", &populacao);
-
-  printf("Qual a área da cidade?\n");
-  scanf("%f", &area);
-
-  printf("Qual é o PIB da cidade?\n");
-  scanf("%f", &pib);
-
-  printf("Qual o número de pontos turisticos da cidade?\n");
-  scanf("%d", &numeroPontosTuristicos);
+  // Calculando Densidade Populacional e PIB per Capita
+  densidadePopulacional = (double) populacao / area;
+  pibPerCapita = (double) (pib * 1000000000.0) / populacao;
 
   printf("\nCarta %d cadastrada com sucesso:\n", carta);
   printf("Estado: %c\n", estado);
@@ -74,8 +48,10 @@ int main(int argc, char const *argv[]) {
   printf("Cidade: %s\n", nomeCidade);
   printf("Populacao: %d\n", populacao);
   printf("Area: %.2lfkm2\n", area);
-  printf("PIB: %.2lf\n", pib);
-  printf("Pontos turisticos: %d\n\n", numeroPontosTuristicos);
+  printf("PIB: %.2lf bilhões de reais \n", pib);
+  printf("Pontos turisticos: %d\n", numeroPontosTuristicos);
+  printf("Densidade Populacional: %.2f hab/km2\n", densidadePopulacional);
+  printf("PIB per Capita: %.2f reais\n", pibPerCapita);
 
   return 0;
 }

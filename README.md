@@ -1,12 +1,13 @@
 # Super Trunfo
 
-Projeto introdutorio em C para cadastro de duas cartas de Super Trunfo pelo terminal.
+Projeto introdutorio em C para cadastro de uma carta de Super Trunfo pelo terminal.
 
 ## O que o programa faz
 
-- Solicita os dados de duas cartas sequencialmente.
+- Solicita qual carta sera cadastrada.
 - Le os campos estado, codigo, nome da cidade, populacao, area, PIB e pontos turisticos.
-- Exibe na tela os dados informados ao final do cadastro de cada carta.
+- Calcula a densidade populacional e o PIB per capita a partir dos dados informados.
+- Exibe na tela os dados da carta cadastrada ao final da entrada.
 
 ## Arquivos do repositorio
 
@@ -40,4 +41,5 @@ No PowerShell:
 ## Observacoes
 
 - O projeto esta focado em praticar entrada e saida de dados em C.
+- O valor do PIB deve ser informado em bilhoes de reais.
 - O repositorio ignora arquivos compilados e configuracoes locais da IDE para manter o versionamento limpo.
