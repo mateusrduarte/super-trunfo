@@ -3,7 +3,7 @@
 int main(void) {
   // Variavel usada para identificar qual carta esta sendo cadastrada.
   int carta1, carta2;
-  char estado1, estado2;
+  char estado1[3], estado2[3];
   char codigo1[4], codigo2[4];
   char nomeCidade1[50], nomeCidade2[50];
   unsigned long int populacao1, populacao2;
@@ -19,7 +19,7 @@ int main(void) {
   scanf("%d",&carta1);
 
   printf("\nEstado: ");
-  scanf(" %c",&estado1);
+  scanf(" %2s",estado1);
 
   printf("\nCodigo: ");
   scanf("%3s",codigo1);
@@ -45,7 +45,7 @@ int main(void) {
   superPoder1 = (float) (populacao1 + area1 + pib1 + numeroPontosTuristicos1 + pibPerCapita1) / densidadePopulacional1;
 
   printf("\nCarta %d cadastrada com sucesso:\n", carta1);
-  printf("Estado: %c\n", estado1);
+  printf("Estado: %s\n", estado1);
   printf("Codigo: %s\n", codigo1);
   printf("Cidade: %s\n", nomeCidade1);
   printf("Populacao: %lu\n", populacao1);
@@ -62,7 +62,7 @@ int main(void) {
   scanf("%d",&carta2);
 
   printf("\nEstado: ");
-  scanf(" %c",&estado2);
+  scanf(" %2s",estado2);
 
   printf("\nCodigo: ");
   scanf("%3s",codigo2);
@@ -88,7 +88,7 @@ int main(void) {
   superPoder2 = (float) (populacao2 + area2 + pib2 + numeroPontosTuristicos2 + pibPerCapita2) / densidadePopulacional2;
 
   printf("\nCarta %d cadastrada com sucesso:\n", carta2);
-  printf("Estado: %c\n", estado2);
+  printf("Estado: %s\n", estado2);
   printf("Codigo: %s\n", codigo2);
   printf("Cidade: %s\n", nomeCidade2);
   printf("Populacao: %lu\n", populacao2);
@@ -109,6 +109,14 @@ int main(void) {
   printf("PIB per Capita: %d\n", pibPerCapita1 > pibPerCapita2);
   printf("Super Poder: %d\n", superPoder1 > superPoder2);
 
+  // Comparando Cartas do Super Trunfo
+  printf("Carta %d - %s (%s): %lu\n", carta1, nomeCidade1, estado1, populacao1);
+  printf("Carta %d - %s (%s): %lu\n", carta2, nomeCidade2, estado2, populacao2);
+  if (populacao1 > populacao2) {
+    printf("Resultado: Carta %d (%s) vencel!\n", carta1, nomeCidade1);
+  } else {
+    printf("Resultado: Carta %d (%s) vencel!\n", carta2, nomeCidade2);
+  }
 
   return 0;
 }
