@@ -4,7 +4,7 @@ Projeto em C para comparar duas cartas de cidades no terminal.
 
 ## Objetivo
 
-Praticar variaveis, calculos numericos, estruturas condicionais e `switch`.
+Praticar calculos numericos, `switch` e estruturas de decisao com comparacao de multiplos atributos.
 
 ## Ferramentas
 
@@ -24,4 +24,5 @@ gcc main.c -o main
 ## Observacoes
 
 - O programa usa duas cartas predefinidas no codigo.
-- A comparacao pode ser feita por populacao, area, PIB, pontos turisticos, densidade populacional, PIB per capita e super poder.
+- O jogador escolhe dois atributos diferentes em menus dinamicos.
+- A carta vencedora e definida pela soma dos dois atributos escolhidos.
