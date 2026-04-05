@@ -1,10 +1,10 @@
 # Super Trunfo
 
-Projeto em C para cadastrar duas cartas de cidades, calcular atributos derivados e comparar os resultados no terminal.
+Projeto em C para comparar duas cartas de cidades no terminal.
 
 ## Objetivo
 
-Praticar entrada e saida de dados, uso de variaveis e operacoes numericas em C.
+Praticar variaveis, calculos numericos, estruturas condicionais e `switch`.
 
 ## Ferramentas
 
@@ -13,13 +13,9 @@ Praticar entrada e saida de dados, uso de variaveis e operacoes numericas em C.
 
 ## Execucao
 
-Compile:
-
 ```bash
 gcc main.c -o main
 ```
-
-Execute:
 
 ```powershell
 .\main.exe
@@ -27,5 +23,5 @@ Execute:
 
 ## Observacoes
 
-- O PIB deve ser informado em bilhoes de reais.
-- O programa compara populacao, area, PIB, pontos turisticos, densidade populacional, PIB per capita e super poder.
+- O programa usa duas cartas predefinidas no codigo.
+- A comparacao pode ser feita por populacao, area, PIB, pontos turisticos, densidade populacional, PIB per capita e super poder.
